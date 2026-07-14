@@ -52,16 +52,41 @@
             filter: drop-shadow(0 0 20px rgba(77, 6, 243, 0.904));
         }
 
-        .btn {
+        /* .btn {
             color: beige;
         }
 
         .btn:hover {
             background-color: rgba(89, 6, 243, 0.904);
             color: rgb(1, 3, 5);
+        } */
+
+        /* From Uiverse.io by ShrinilDhorda */
+        .btn {
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border: none;
+            outline: none;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            background-color: rgb(14, 14, 26);
+            color: rgb(234, 234, 234);
+            font-weight: 700;
+            transition: 0.6s;
+            box-shadow: 0px 0px 60px #1f4c65;
+            -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
         }
 
+        .btn:active {
+            scale: 0.92;
+        }
 
+        .btn:hover {
+            background: rgb(2, 29, 78);
+            background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+            color: rgb(4, 4, 38);
+        }
 
         .active {
             border-radius: 40%;
@@ -168,10 +193,11 @@
             -webkit-transform-style: preserve-3d;
             position: relative;
         }
-        .card{
+
+        .card {
             height: 200px;
-            background-color:yellow;
-    
+            background-color: yellow;
+
         }
     </style>
 </head>
@@ -198,13 +224,14 @@
                                     class="bi bi-house"> Home</i></a>
                         </li>
                         <li class="nav-item lhover">
-                            <a class="nav-link text-white mr-5" href="#"><i class="bi bi-person"> About </i></a>
+                            <a class="nav-link text-white mr-5" data-bs-toggle="modal" data-bs-target="#about"><i
+                                    class="bi bi-person"> About </i></a>
                         </li>
                         <li class="nav-item lhover ">
-                            <a class="nav-link text-white" href="#"><i class="fas fa-tools">Skills</i></a>
+                            <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#skills"><i class="fas fa-tools">Skills</i></a>
                         </li>
                         <li class="nav-item lhover ">
-                            <a class="nav-link text-white" href="#"><i class="bi bi-briefcase"> My
+                            <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#myproject"><i class="bi bi-briefcase"> My
                                     Project</i></a>
                         </li>
                         <li class="nav-item lhover">
@@ -224,7 +251,7 @@
         </nav>
     </head>
     <main>
-        <section class="container-fluid  mb-4">
+        <section class="container-fluid  mb-4 mt-5">
             <div>
                 <div class="row ">
                     <div class="col-md-6 mt-3  infoshodow">
@@ -243,31 +270,223 @@
                     <div class="col-md-6">
                         <picture class="d-flex justify-content-center">
                             <img src="image/devidasphoto1.png" alt="profile photo"
-                                class="img-fluid mt-5 mb-3 photoradius shodowbox  " />
+                                class="img-fluid mt-5 mb-3 photoradius shodowbox " />
                         </picture>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- another information -->
-        <section class="boxabout">
-            <div class="text-center container mb-4 ">
-                <h3>--About Me--</h3>
-                <h4>I'm Devidas Walunj, a Full Stack Web Developer with a Master's in Computer Applications (MCA). I
-                    enjoy building complete web applications — from designing clean, responsive interfaces to writing
-                    backend logic and managing databases. My go-to stack includes HTML, CSS, JavaScript, Python (Flask),
-                    and MySQL.
-                    One of my recent projects, a Dairy Product Management System, let me build both the customer-facing
-                    side (browsing, ordering, tracking) and an admin panel for inventory and sales — and I loved seeing
-                    a full product come together end to end.
-                    I'm currently looking for opportunities where I can keep learning, take on real-world problems, and
-                    grow as a developer.</h4>
-            </div>
-        </section>
+      
         <!-- skills section -->
         <section>
             <div class="text-center container mt-4">
+                <h2>My Skills</h2>
+                <div class="container our-services">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front" style="background: #1602ca !important;">
+                                        <img class="lazyload" src="image/frontend.png" alt="Avatar"
+                                            style="width:300px;height:200px;">
+                                        <h3 class="mt-2">Frontend Development</h3>
+                                    </div>
+                                    <div class="back container" style="background: #010804 !important;">
+                                        <h5 class="mt-2">Frontend Development</h5>
+                                        <label class="bi bi-filetype-html">HTMl</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 90%">90%</div>
+                                        </div>
+                                        <label class="bi bi-filetype-css">CSS</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 80%">80%</div>
+                                        </div>
+                                        <label class="bi bi-filetype-js">JAVASCRIPT</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 75%">75%</div>
+                                        </div>
+                                        <label class="bi bi-bootstrap">BOOTSTRAP </label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width:90%">90%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front" style="background: #311B92;">
+                                        <img class="lazyload" src="image/backend.png" alt="Avatar"
+                                            style="width:300px;height:200px;">
+                                        <h3 class="mt-2">Backend Development</h3>
+                                    </div>
+                                    <div class="back container " style="background: #060313;">
+                                        <h5 class="mt-2">BACKEND DEVELOPMENT</h5>
+                                        <label class="bi bi-filetype-py">Python</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 90%">90%</div>
+                                        </div>
+                                        <label>Flask</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 80%">80%</div>
+                                        </div>
+                                        <label>Django</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 75%">75%</div>
+                                        </div>
+                                        <label>MYSQL </label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width:90%">90%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front" style="background: #311B92;">
+                                        <img class="lazyload" src="image/toolsandtech.png" alt="Avatar"
+                                            style="width:300px;height:200px;">
+                                        <h3 class="mt-2">Tools & Technologies</h3>
+                                    </div>
+                                    <div class="back container " style="background: #080808;">
+                                        <h5 class="mt-2">Tools & Technologies</h5>
+                                        <label class="bi bi-github"> Git & Github</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 90%">90%</div>
+                                        </div>
+                                        <label class="bi bi-file-earmark-code-fill">VS Code</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 80%">80%</div>
+                                        </div>
+                                        <label>MS Word</label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 75%">75%</div>
+                                        </div>
+                                        <label>Power Point </label>
+                                        <div class="progress" role="progressbar" aria-label="Example with label"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width:90%">90%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- projects -->
+        <section>
+
+        </section>
+        <!-- Education Section -->
+        <section class="d-flex justify-content-around p-5">
+
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card" style="width: 15rem; ">
+                        <div class="card-body">
+                            <h5 class="card-title">Master in Computer Application</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">----</h6>
+                            <p class="card-text">Dr. D. Y. Pati center for management and research chikhali, Pune</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">BBA(CA)</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">8.17cgpa</h6>
+                            <p class="card-text">Chandmal Tarachand Bora colleage Shirur,Pune</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card" style="width: 15rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">12<sup>th</sup></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">75%</h6>
+                            <p class="card-text">SHRI CHATRAPATI SHIVAJI VIDYALAYA BELWANDI BK.,Shrigonda , Ahilyanagar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card" style="width:15rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">10<sup>th</sup></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">67%</h6>
+                            <p class="card-text">Vidyadham Prashala deodaithan ,Shrigonda , Ahilyanagar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- modal section start -->
+        <!-- about modal start -->
+        <section>
+            <div class="modal fade" id="about" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">About Me</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center container mb-4 ">
+                                <h3>--About Me--</h3>
+                                <h4>I'm Devidas Walunj, a Full Stack Web Developer with a Master's in Computer
+                                    Applications (MCA). I
+                                    enjoy building complete web applications — from designing clean, responsive
+                                    interfaces to writing
+                                    backend logic and managing databases. My go-to stack includes HTML, CSS, JavaScript,
+                                    Python (Flask),
+                                    and MySQL.
+                                    One of my recent projects, a Dairy Product Management System, let me build both the
+                                    customer-facing
+                                    side (browsing, ordering, tracking) and an admin panel for inventory and sales — and
+                                    I loved seeing
+                                    a full product come together end to end.
+                                    I'm currently looking for opportunities where I can keep learning, take on
+                                    real-world problems, and
+                                    grow as a developer.</h4>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about modal end -->
+         <!-- Skill model start -->
+          <section>
+            <section>
+            <div class="modal fade" id="skills" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">About Me</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center container mt-4">
                 <h2>My Skills</h2>
                 <div class="container our-services">
                     <div class="row">
@@ -396,52 +615,16 @@
                     </div> -->
                 </div>
             </div>
-        </section>
-        <!-- projects -->
-         <section>
-            
-         </section>
-        <!-- Education Section -->
-        <section class="d-flex justify-content-around p-5">
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card" style="width: 15rem; ">
-                        <div class="card-body">
-                            <h5 class="card-title">Master in Computer Application</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">----</h6>
-                            <p class="card-text">Dr. D. Y. Pati center for management and research chikhali, Pune</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">BBA(CA)</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">8.17cgpa</h6>
-                            <p class="card-text">Chandmal Tarachand Bora colleage Shirur,Pune</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card" style="width: 15rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">12<sup>th</sup></h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">75%</h6>
-                            <p class="card-text">SHRI CHATRAPATI SHIVAJI VIDYALAYA BELWANDI BK.,Shrigonda , Ahilyanagar</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card" style="width:15rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">10<sup>th</sup></h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">67%</h6>
-                            <p class="card-text">Vidyadham Prashala deodaithan ,Shrigonda , Ahilyanagar</p>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+          </section>
+          <!-- skill modal end -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
